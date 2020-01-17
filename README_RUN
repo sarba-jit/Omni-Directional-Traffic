@@ -1,0 +1,20 @@
+Nov. 08, 2019
+
+1. To detect bee motions in a video, run OmniVidBeeCount.py
+2. To run OmniVidBeeCount, you need to have the following files:
+
+- data.py - this the file with directories
+- beepi_convents.py - this is the file with the model architectures
+- background.py - this is our motion detector
+- If you want to play with different motion detection, change the
+value of the variable BCKGRND in OmniVidBeeCount.py. It is set to 'MOG'.
+You can use 'MOG2' or 'KNN', too.
+- The persisted models are saved in ../persisted_bee1_models/
+and ../persisted_bee2_models.
+- The directory ../persisted_models/ is used during
+training.
+- OmniVidBeeCount.py has a function to test each ConvNet model. For example,
+vid_run_vgg16_1s tests vgg16_1s model saved persisted_bee1_models/.
+- Each model in these functions is loaded with beepi_convents loader functions.
+For example, vgg16 is loaded with beepi_convents.VGG16(); ConvNetGS3 is loaded
+with beepi_convnets.ConvNetGS3().
